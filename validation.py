@@ -3,11 +3,10 @@
 
 
 # import the necessary packages
-from sklearn.preprocessing import LabelEncoder
-from sklearn.cross_validation import train_test_split
+
 from keras.models import Sequential
 from keras.layers import Activation
-from keras.optimizers import SGD
+
 from keras.layers import Dense
 from keras.utils import np_utils
 from imutils import paths
@@ -33,11 +32,6 @@ model.add(Activation("softmax"))
 print("[INFO] loading weights...")
 model.load_weights('end_result.h5')
 
-# train the model using SGD
-print("[INFO] compiling model...")
-sgd = SGD(lr=0.01)
-model.compile(loss="binary_crossentropy", optimizer=sgd,
-	metrics=["accuracy"])
 	
 	
 data = []
@@ -52,6 +46,7 @@ for (i, imagePath) in enumerate(imagePaths):
 		# construct a feature vector raw pixel intensities, then update
 		# the data matrix and labels list
 	features = image_to_feature_vector(image)
+	print features.size
 	data.append(features)
 	labels.append(os.path.basename(imagePath))
 		# show an update every 10 images

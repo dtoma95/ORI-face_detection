@@ -1,0 +1,6 @@
+1499304083601	geckodriver	INFO	Listening on 127.0.0.1:55672
+1499304085668	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1499304089809	Marionette	INFO	Listening on port 55678
+1499304090891	Marionette	WARN	TLS certificate errors will be ignored for this session
+1499304095104	Marionette	INFO	New connections will no longer be accepted
+JavaScript error: resource://gre/components/nsUrlClassifierListManager.js, line 536: TypeError: this.tablesData[table] is undefined
